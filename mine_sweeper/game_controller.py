@@ -145,7 +145,7 @@ class GameController:
             message = "YOU LOST"
 
         fill(BLACK)
-        textSize(self.SIZE*2)
+        textSize(self.SIZE*min(self.rows, (self.cols/len(message))))
         textAlign(CENTER)
         text(message, self.SIZE * self.cols/2, self.SIZE * self.rows/2)
 

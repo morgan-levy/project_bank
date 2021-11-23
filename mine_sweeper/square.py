@@ -65,6 +65,12 @@ class Square:
         fill(150)
         noStroke()
         square(x + self.SIZE*SQUARE_OFFSET, y + self.SIZE*SQUARE_OFFSET, self.SIZE*(1 - 2*SQUARE_OFFSET))
+        fill(0)
+        quad(x, y, x + SQUARE_OFFSET*self.SIZE, y + SQUARE_OFFSET*self.SIZE, x + self.SIZE*(1-SQUARE_OFFSET), y + SQUARE_OFFSET*self.SIZE, x + self.SIZE, y)
+        quad(x, y, x + SQUARE_OFFSET*self.SIZE, y + SQUARE_OFFSET*self.SIZE, x + self.SIZE*SQUARE_OFFSET, y + self.SIZE*(1-SQUARE_OFFSET), x, y + self.SIZE)
+        fill(225)
+        quad(x, y + self.SIZE, x + self.SIZE*SQUARE_OFFSET, y + self.SIZE*(1-SQUARE_OFFSET), x + self.SIZE*(1-SQUARE_OFFSET), y + self.SIZE*(1-SQUARE_OFFSET), x + self.SIZE, y + self.SIZE)
+        quad(x + self.SIZE*(1-SQUARE_OFFSET), y + self.SIZE*(1-SQUARE_OFFSET), x + self.SIZE, y + self.SIZE, x + self.SIZE, y, x + self.SIZE*(1-SQUARE_OFFSET), y + SQUARE_OFFSET*self.SIZE)
     
     def display_flag(self, x, y):
         fill(RED[RED_INDEX], RED[GREEN_INDEX], RED[BLUE_INDEX])
